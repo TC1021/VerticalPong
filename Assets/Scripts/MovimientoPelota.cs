@@ -10,6 +10,10 @@ public class MovimientoPelota : MonoBehaviour {
 	public Text _puntos;
 	private bool _der, _izq, _aba, _arr;
 
+	[Range(-45.0f, 45.0f)]
+	public float vectorX = 0.0f;
+	[Range(-45.0f, 45.0f)]
+	public float vectorY = 0.0f;
 	// Use this for initialization
 	void Start () 
 	{
@@ -22,7 +26,7 @@ public class MovimientoPelota : MonoBehaviour {
 		_izq = _aba = _arr = false;
 		_puntos.text = "Marcador: "+_puntosIzq+"-"+_puntosDer+" ";
 		*/
-		GetComponent<Rigidbody2D> ().AddForce ( new Vector2 (Random.Range(-360,360),Random.Range(-360,360)) );
+		GetComponent<Rigidbody2D> ().AddForce(new Vector2(vectorX,vectorY));
 	}
 
 	/*
