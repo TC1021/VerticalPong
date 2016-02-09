@@ -8,11 +8,11 @@ public class Movement_North_Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKey (KeyCode.LeftArrow)) 
+		if (Input.GetKey (KeyCode.LeftArrow) && transform.position.x>-6.4f) 
 		{
 			GetComponent<Transform>().Translate ( new Vector2(-0.2f, 0) );
 		}
-		if (Input.GetKey (KeyCode.RightArrow)) 
+		if (Input.GetKey (KeyCode.RightArrow) && transform.position.x<6.5f) 
 		{
 			GetComponent<Transform>().Translate ( new Vector2(0.2f, 0) );
 		}

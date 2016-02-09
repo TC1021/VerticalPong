@@ -4,27 +4,30 @@ using System.Collections;
 
 public class MovimientoPelota : MonoBehaviour {
 	// Variables globales para las fuerzas aplicadas a la pelota
-	private Vector2 _fuerza, _fuerza1, _fuerza2, _fuerza3, _fuerza4;
+	private Vector2 fuerza;
+	//private Vector2 _fuerza1, _fuerza2, _fuerza3, _fuerza4;
 	private int _puntosIzq = 0, _puntosDer = 0;
-	private bool _der, _izq, _aba, _arr;
 	public Text _puntos;
+	private bool _der, _izq, _aba, _arr;
 
 	// Use this for initialization
-	void Start () {
-		_fuerza = new Vector2 ( 200, -50 );
+	void Start () 
+	{
+		/*
 		_fuerza1 = new Vector2 ( -250, -150 ); // Hacia izq y abajo
 		_fuerza2 = new Vector2 ( 250, -150 ); // Hacia der y abajo
 		_fuerza3 = new Vector2 ( 250, 150 ); // Hacia der y arriba
 		_fuerza4 = new Vector2 ( -250, 150 ); // Hacia izq y arriba
-		GetComponent<Rigidbody2D> ().AddForce ( _fuerza );
 		_der = true;
 		_izq = _aba = _arr = false;
 		_puntos.text = "Marcador: "+_puntosIzq+"-"+_puntosDer+" ";
+		*/
+		GetComponent<Rigidbody2D> ().AddForce ( new Vector2 (Random.Range(-360,360),Random.Range(-360,360)) );
 	}
 
 	/*
 	 * Funcion que detecta colisiones.
-	 **/
+
 	void OnCollisionEnter2D(Collision2D col)
 	{
 		if (col.gameObject.name == "BarraDer") {
@@ -64,10 +67,8 @@ public class MovimientoPelota : MonoBehaviour {
 			_puntosIzq++;
 			_puntos.text = "Marcador: "+_puntosIzq+"-"+_puntosDer;
 		}
-	}
+	}*/
 
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	void Update () {}
 }
