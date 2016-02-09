@@ -10,9 +10,9 @@ public class MovimientoPelota : MonoBehaviour {
 	public Text _puntos;
 	private bool _der, _izq, _aba, _arr;
 
-	[Range(-45.0f, 45.0f)]
+	[Range(-90.0f, 90.0f)]
 	public float vectorX = 0.0f;
-	[Range(-45.0f, 45.0f)]
+	[Range(-90.0f, 90.0f)]
 	public float vectorY = 0.0f;
 	// Use this for initialization
 	void Start () 
