@@ -10,11 +10,11 @@ public class Movement_North_Player : MonoBehaviour {
 	{
 		if (Input.GetKey (KeyCode.LeftArrow) && transform.position.x>-6.4f) 
 		{
-			GetComponent<Transform>().Translate ( new Vector2(-0.2f, 0) );
+			GetComponent<Transform>().Translate ( new Vector2(-0.14f, 0) );
 		}
 		if (Input.GetKey (KeyCode.RightArrow) && transform.position.x<6.5f) 
 		{
-			GetComponent<Transform>().Translate ( new Vector2(0.2f, 0) );
+			GetComponent<Transform>().Translate ( new Vector2(0.14f, 0) );
 		}
 	}
 }
